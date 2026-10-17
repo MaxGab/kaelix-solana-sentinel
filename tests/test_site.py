@@ -144,7 +144,7 @@ class ReleaseTests(unittest.TestCase):
         self.assertIn("www.googleapis.com/pagespeedonline/v5/runPagespeed", page)
         self.assertIn("self-reported", page)
         self.assertIn("Google did not return", page)
-        self.assertIn("mailto:contact@kaelix.studio", page)
+        self.assertIn("mailto:maxgab62+kaelix@gmail.com", page)
         self.assertIn("€35", page)
         self.assertIn("€89", page)
         self.assertIn('href="leadcheck.html"', self.studio)
