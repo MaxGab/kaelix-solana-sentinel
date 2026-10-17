@@ -32,3 +32,5 @@ Use the public request form at https://github.com/MaxGab/kaelix-solana-sentinel/
 Regression checks: python3 -m unittest -v tests/test_site.py; cd examples/kaelix-data-audit && python3 -m unittest -v test_csv_audit.py.
 
 **Commercial status:** no completed customer orders or payments are claimed. The catalog is a free quote intake, NOT a checkout or payment processor. Scope and payment terms require explicit mutual acceptance.
+
+New free MIT MCP developer tool: https://github.com/MaxGab/kaelix-data-mcp (version 1.0.0; 25 passing tests).
