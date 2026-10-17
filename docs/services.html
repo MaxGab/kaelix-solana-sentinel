@@ -88,6 +88,7 @@ footer a:hover{text-decoration:underline}
     <div class="navlinks">
       <a href="#services">Services</a>
       <a href="#demo">Free tools</a>
+      <a href="leadcheck.html">Free website test</a>
       <a href="index.html">Solana Sentinel</a>
       <a class="navcta" href="#quote">Start a project →</a>
     </div>
@@ -101,6 +102,7 @@ footer a:hover{text-decoration:underline}
         <div class="actions">
           <a class="button" href="#quote">Get a project quote ↗</a>
           <a class="button outline" href="#demo">Try the free audit ↘</a>
+          <a class="button outline" href="leadcheck.html">Free Website LeakCheck ↗</a>
         </div>
         <p class="microcopy">Worldwide remote delivery · No retainer required · No payment before scope agreement</p>
       </div>
@@ -118,6 +120,12 @@ footer a:hover{text-decoration:underline}
   <div class="metric"><strong>Local first</strong><span>No client keys or raw data required in public requests</span></div>
 </div></div>
 <div class="wrap">
+  <section aria-labelledby="leakcheck-title" style="padding:51px 0 32px">
+    <div class="card featured" style="display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px">
+      <div style="max-width:750px"><p class="eyebrow">FREE WEBSITE HEALTH TOOL · NEW</p><h2 id="leakcheck-title" style="margin:0 0 12px">Is your website leaking customers?</h2><p>Try our new free mobile Lighthouse diagnostics and 60-second conversion self-check. Find out what to review before paying for a fix. If you need implementation, ask for a clearly scoped Website Fix Sprint from €89.</p><p class="detail">Google diagnostics depend on public API availability; the conversion self-check uses only your answers. No signup or data collection.</p></div>
+      <a class="button" href="leadcheck.html">Run LeakCheck for free ↗</a>
+    </div>
+  </section>
   <section id="services">
     <div class="topline"><p class="eyebrow">Built for real tasks</p><h2>Pick the problem. Get a working solution.</h2><p class="subtitle">These are indicative starting prices for tightly scoped work. We review feasibility and agree on specifications, deliverables and payment method before accepting any paid project.</p></div>
     <div class="grid">
@@ -196,7 +204,7 @@ footer a:hover{text-decoration:underline}
   <section id="ai-tools" aria-labelledby="mcp-title"><div class="topline"><p class="eyebrow">FREE DEVELOPER TOOL</p><h2 id="mcp-title">KAELIX Local Data MCP.<br>Audits inside your AI workflow.</h2><p class="subtitle">Use a real, MIT-licensed MCP server for CSV and JSON data-quality checks and SHA-256 integrity. It runs entirely on your computer with Python 3.10+; no API subscription, wallet connection or telemetry.</p></div><div class="actions"><a class="button" href="https://github.com/MaxGab/kaelix-data-mcp">View open-source MCP server ↗</a><a class="button outline" href="https://github.com/MaxGab/kaelix-data-mcp/releases/tag/v1.0.0">Get free v1.0.0 release ↗</a></div><p class="detail">25 automated tests passed, including an actual MCP JSON-RPC stdio transport round trip. Free usage does not create a paid order.</p></section>
 <section id="quote" aria-labelledby="quote-heading">
     <div class="topline"><p class="eyebrow">Start with the actual problem</p><h2 id="quote-heading">A quote without another signup.</h2>
-      <p class="subtitle">Describe what you need. The brief is assembled privately in your browser; nothing is uploaded. Copy it and send it directly to the KAELIX Studio Instagram account. Or use GitHub for technical requests.</p></div>
+      <p class="subtitle">Describe what you need. The brief is assembled privately in your browser; nothing is uploaded. Send it with one click through your email app, or copy it to Instagram. GitHub is available for technical requests.</p></div>
     <div class="demo" aria-label="Free project request preparation">
       <div class="demo-intro">
         <span class="badge">FREE PROJECT INQUIRY</span>
@@ -229,6 +237,7 @@ footer a:hover{text-decoration:underline}
         <label for="quote-preview">Review and copy your message</label>
         <textarea id="quote-preview" readonly spellcheck="false" aria-live="polite" placeholder="Your request will appear here."></textarea>
         <button type="button" class="button outline demobtn" id="quote-copy">Copy message</button>
+        <a class="button outline demobtn" id="quote-email" href="mailto:contact@kaelix.studio?subject=KAELIX%20Project%20Inquiry">Send prepared quote by email ↗</a>
         <a class="button" href="https://ig.me/m/kaelix_hq" target="_blank" rel="noopener noreferrer" id="quote-instagram">Open Instagram DM ↗</a>
         <p class="privacynote" id="quote-status" role="status" aria-live="polite">Create the message, then copy it into your DM. Never include passwords, API keys, seed phrases or confidential customer records.</p>
         <p class="privacynote">Prefer GitHub? <a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml" target="_blank" rel="noopener noreferrer">Use the public technical request form ↗</a></p>
@@ -359,6 +368,7 @@ footer a:hover{text-decoration:underline}
   var qPreview = document.getElementById('quote-preview');
   var qCopy = document.getElementById('quote-copy');
   var qStatus = document.getElementById('quote-status');
+  var qEmail = document.getElementById('quote-email');
   if (qGenerate && qPreview && qCopy && qStatus) {
     qGenerate.addEventListener('click', function () {
       var description = document.getElementById('quote-brief').value.trim();
@@ -375,7 +385,8 @@ footer a:hover{text-decoration:underline}
       qPreview.value = 'Hello KAELIX Studio! I would like a free project quote.\\nService: ' +
         service + '\\nBudget: ' + budget + '\\nDesired outcome: ' + description +
         '\\nPlease confirm scope, tests, delivery window and pricing before any work begins.';
-      qStatus.textContent = 'Brief prepared locally. Copy it, then open Instagram and paste it into the DM.';
+      if (qEmail) qEmail.href = 'mailto:contact@kaelix.studio?subject=' + encodeURIComponent('KAELIX Project Inquiry') + '&body=' + encodeURIComponent(qPreview.value);
+      qStatus.textContent = 'Brief prepared. Click Send by email, or copy it to Instagram DM.';
     });
     qCopy.addEventListener('click', function () {
       if (!qPreview.value) { qStatus.textContent = 'Please prepare your brief first.'; return; }
