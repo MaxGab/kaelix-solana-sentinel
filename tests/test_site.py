@@ -11,6 +11,7 @@ REPO = Path(__file__).resolve().parents[1]
 LANDING = REPO / "docs/index.html"
 STUDIO = REPO / "docs/services.html"
 REQUEST = REPO / ".github/ISSUE_TEMPLATE/service-request.yml"
+LEAKCHECK = REPO / "docs/leadcheck.html"
 
 
 class TagAudit(HTMLParser):
@@ -128,6 +129,40 @@ class ReleaseTests(unittest.TestCase):
         self.assertIn('service-request.yml', self.studio)
         self.assertIn('Prefer GitHub?', self.studio)
         self.assertIn('No GitHub account required for Instagram messages', self.studio)
+
+    def test_leakcheck_is_a_real_free_user_tool(self):
+        page = LEAKCHECK.read_text(encoding="utf8")
+        audit = TagAudit()
+        audit.feed(page)
+        self.assertEqual(len(audit.ids), len(set(audit.ids)))
+        for href in audit.hrefs:
+            if href.startswith("#"):
+                self.assertIn(href[1:], audit.ids)
+        self.assertEqual(audit.handlers, [])
+        self.assertFalse([src for src in audit.inputs if src])
+        self.assertIn("PageSpeed Insights", page)
+        self.assertIn("www.googleapis.com/pagespeedonline/v5/runPagespeed", page)
+        self.assertIn("self-reported", page)
+        self.assertIn("Google did not return", page)
+        self.assertIn("mailto:contact@kaelix.studio", page)
+        self.assertIn("€35", page)
+        self.assertIn("€89", page)
+        self.assertIn('href="leadcheck.html"', self.studio)
+
+    def test_leakcheck_js_and_structured_data(self):
+        page = LEAKCHECK.read_text(encoding="utf8")
+        parts = re.findall(r"<script([^>]*)>(.*?)</script>", page, re.S)
+        self.assertEqual(len(parts), 2)
+        schema = [json.loads(body) for props, body in parts if "application/ld+json" in props]
+        self.assertEqual(len(schema), 1)
+        self.assertEqual(schema[0]["@type"], "WebApplication")
+        scripts = [body for props, body in parts if "application/ld+json" not in props]
+        self.assertEqual(len(scripts), 1)
+        with tempfile.TemporaryDirectory() as td:
+            fn = Path(td) / "leakcheck.js"
+            fn.write_text(scripts[0], encoding="utf8")
+            result = subprocess.run(["node", "--check", str(fn)], capture_output=True, text=True, timeout=12)
+        self.assertEqual(result.returncode, 0, result.stderr)
 
     def test_prices_are_indicative(self):
         self.assertIn("From €59", self.studio)
