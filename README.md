@@ -24,6 +24,8 @@ Oferta de lansare: **300 RON per setup**, preț orientativ brut, nu venit realiz
 Free interactive website conversion checklist and optional real mobile Google Lighthouse metrics:
 https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html
 
+Enquiry email currently routes to the verified Gmail plus-alias `maxgab62+kaelix@gmail.com` because the vanity domain `kaelix.studio` has no working DNS as of 2026-10-17. The route was tested with an INBOX receipt (internal test, not a sale). Restore a branded inbox only after validating DNS/MX and a real delivery test.
+
 The tool runs as a static GitHub Pages page with no site-side analytics, email capture or backend. Lighthouse API requests run in the user's browser directly against Google and may be rate-limited; self-reported checklist scores are labelled accordingly, not passed off as website scans. Clients can request human-reviewed website audits starting at **€35** and a three-fix scoped Website Fix Sprint starting at **€89**, subject to written feasibility, terms and price agreement. No payment processor, earned revenue or sales conversion results are claimed.
 
 ## KAELIX Studio — international automation services
