@@ -104,6 +104,31 @@ class ReleaseTests(unittest.TestCase):
         self.assertTrue(demo.exists())
         self.assertIn("No data uploaded", demo.read_text())
 
+    def test_social_sales_entry_is_visible_without_github(self):
+        self.assertIn('href="#quote"', self.studio)
+        self.assertIn('id="quote-heading"', self.studio)
+        self.assertIn('https://ig.me/m/kaelix_hq', self.studio)
+        self.assertIn('Instagram @kaelix_hq', self.studio)
+
+    def test_local_quote_builder_does_not_submit_details_to_servers(self):
+        self.assertIn('id="quote-preview"', self.studio)
+        self.assertIn('id="quote-generate"', self.studio)
+        self.assertIn('id="quote-copy"', self.studio)
+        self.assertIn('navigator.clipboard.writeText', self.studio)
+        self.assertNotIn('fetch(', self.studio)
+        self.assertNotIn('new XMLHttpRequest', self.studio)
+        self.assertNotIn('<form action=', self.studio)
+
+    def test_quote_builder_requires_meaningful_problem(self):
+        self.assertIn('description.length < 20', self.studio)
+        self.assertIn('description.length > 1000', self.studio)
+        self.assertIn('confirm scope, tests, delivery window and pricing', self.studio)
+
+    def test_low_friction_quote_keeps_github_for_engineers(self):
+        self.assertIn('service-request.yml', self.studio)
+        self.assertIn('Prefer GitHub?', self.studio)
+        self.assertIn('No GitHub account required for Instagram messages', self.studio)
+
     def test_prices_are_indicative(self):
         self.assertIn("From €59", self.studio)
         self.assertIn("From €39", self.studio)
