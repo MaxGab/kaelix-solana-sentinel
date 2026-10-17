@@ -1,8 +1,8 @@
-# ORVYXA Solana Sentinel — pagină comercială
+# KAELIX Solana Sentinel — pagină comercială
 
 Landing page pentru serviciul de configurare a unui monitor read-only pentru adrese publice Solana.
 
-Website: https://maxgab.github.io/orvyxa-solana-sentinel/
+Website: https://maxgab.github.io/kaelix-solana-sentinel/
 
 Serviciul este un program Python local, testat cu 13 teste automate plus un control RPC pe Solana Mainnet. Programul propriu-zis nu este publicat în acest repository; se oferă instalare și configurare personalizată.
 
@@ -10,7 +10,7 @@ Oferta de lansare: **300 RON per setup**, preț orientativ brut, nu venit realiz
 
 ## Comenzi și cereri de ofertă
 
-[Deschide o cerere publică](https://github.com/MaxGab/orvyxa-solana-sentinel/issues/new?template=comanda.yml). Cererile GitHub sunt publice; nu include date personale sau confidențiale.
+[Deschide o cerere publică](https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=comanda.yml). Cererile GitHub sunt publice; nu include date personale sau confidențiale.
 
 ## Limitări
 
