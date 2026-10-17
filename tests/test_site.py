@@ -164,6 +164,18 @@ class ReleaseTests(unittest.TestCase):
             result = subprocess.run(["node", "--check", str(fn)], capture_output=True, text=True, timeout=12)
         self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_kids_studio_adult_facing_pilot_services(self):
+        page = (REPO / "docs/kids-studio.html").read_text(encoding="utf8")
+        self.assertIn("Original Educational Cartoons", page)
+        self.assertIn('href="kids-studio.html"', self.studio)
+        self.assertIn("maxgab62+kaelix@gmail.com", page)
+        self.assertIn("From €99", page)
+        self.assertIn("pilot stage", page)
+        self.assertIn("No YouTube monetization claims", page)
+        self.assertTrue((REPO / "docs/assets/kaelix-kids-preview.png").is_file())
+        self.assertIn("kids-studio.html", (REPO / "docs/sitemap.xml").read_text(encoding="utf8"))
+        self.assertFalse((REPO / "kids-studio").exists(), "Do not leak proprietary worker source to public GitHub")
+
     def test_prices_are_indicative(self):
         self.assertIn("From €59", self.studio)
         self.assertIn("From €39", self.studio)
