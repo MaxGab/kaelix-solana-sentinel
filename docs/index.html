@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Conway Solana Sentinel — monitorizare read-only pentru portofele Solana, istoric tranzacții și alerte personalizate. Configurare de la 300 lei, fără chei private.">
+  <meta property="og:title" content="Conway Solana Sentinel | Monitorizare Solana">
+  <meta property="og:description" content="Vezi ce se întâmplă cu portofelul tău Solana. Monitorizare privată, read-only, fără conectare sau seed phrase.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#061014">
+  <title>Conway Solana Sentinel — Monitorizare de portofele Solana | 300 lei</title>
+  <style>
+    :root{color-scheme:dark;--bg:#061014;--line:#24434b;--text:#e8f8f5;--muted:#abc3c5;--mint:#61f6c6;--mint2:#9ef4ef;--card:#0b1b22}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 76% -12%,#163b41 0,transparent 36%),radial-gradient(circle at 3% 32%,#112a32 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}button,a{touch-action:manipulation}a:focus-visible,button:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+    .container{max-width:1150px;margin:auto;padding:0 28px}.nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #213840}
+    .brand{font-size:1.15rem;font-weight:850;text-decoration:none;letter-spacing:.13em}.brand span{color:var(--mint)}
+    .mini-nav{display:flex;align-items:center;gap:22px;color:var(--muted);font-size:.91rem}.mini-nav a{text-decoration:none}.mini-nav a:hover{color:#fff}
+    .mini-nav .navcta{border:1px solid #4dbf9f;color:#c8ffea;border-radius:8px;padding:9px 15px}
+    .hero{padding:86px 0 100px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(310px,.9fr);gap:65px;align-items:center}
+    .eyebrow{color:var(--mint);font-size:.79rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;margin:0 0 25px}
+    h1{font-size:clamp(2.7rem,5.7vw,5.4rem);letter-spacing:-.065em;line-height:1.07;margin:0 0 25px}
+    h1 em{font-style:normal;color:var(--mint)}.sub{color:var(--muted);font-size:1.15rem;max-width:560px;margin:0 0 37px}
+    .actions{display:flex;gap:13px;align-items:center;flex-wrap:wrap}.button{display:inline-block;text-decoration:none;background:var(--mint);color:#05251f;border-radius:10px;padding:16px 23px;font-weight:800;box-shadow:0 10px 27px #1aab8350;transition:transform .18s}.button:hover{transform:translateY(-3px)}
+    .secondary{background:#102832;box-shadow:none;border:1px solid var(--line);color:#d7f8ef}.tiny{margin:20px 0 0;font-size:.87rem;color:#a0bebd}
+    .terminal{border:1px solid #41676b;background:linear-gradient(130deg,#0c232a,#081719);box-shadow:0 36px 95px #0008;border-radius:16px;overflow:hidden;transform:rotate(-1deg)}
+    .terminalbar{display:flex;align-items:center;gap:7px;border-bottom:1px solid #23474a;padding:16px 20px;color:#9aacae;font-size:.75rem}.dot{display:inline-block;width:8px;height:8px;background:#69878d;border-radius:50%}.terminalbar span:nth-of-type(1){background:#f17e7e}.terminalbar span:nth-of-type(2){background:#f5c36a}.terminalbar span:nth-of-type(3){background:#5eca9b}.filename{margin-left:auto}
+    pre{overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere;margin:0;padding:28px 22px 34px;color:#dbefe9;font-family:ui-monospace,Consolas,"SFMono-Regular",Menlo,monospace;font-size:.88rem;line-height:2}
+    .green{color:#88ffbd}.faint{color:#83a4a9}.line{border-top:1px solid var(--line)}
+    section{padding:68px 0}.sectiontop{max-width:730px;margin-bottom:30px}.sectiontop h2{font-size:clamp(2rem,3.3vw,3rem);letter-spacing:-.045em;line-height:1.17;margin:0 0 12px}.sectiontop p{color:var(--muted);margin:0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:30px;border:1px solid #24434b;background:linear-gradient(150deg,#13262c80,#0a161bbd);border-radius:15px}.symbol{font-size:1.3rem;color:var(--mint);margin-bottom:20px}.card h3{font-size:1.14rem;margin:0 0 9px}.card p{margin:0;color:var(--muted);font-size:.94rem}
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:25px}.pricing{border:1px solid #4b957d;border-radius:18px;padding:36px;background:linear-gradient(130deg,#12302d,#0a1d21)}.tag{font-size:.76rem;letter-spacing:.16em;color:var(--mint);font-weight:800}.price{font-size:4rem;letter-spacing:-.07em;line-height:1;margin:17px 0}.price small{font-size:1rem;font-weight:500;letter-spacing:normal;color:#b9d4ca}.check{padding-left:21px;color:#d8eee7}.check li{padding:6px 0}.desc{color:var(--muted)}.notes{border:1px solid var(--line);border-radius:18px;padding:36px}.notes h3{margin-top:0}.notes p{color:var(--muted);margin:0 0 21px}.notes strong{color:#e7fcf5}
+    .qa{display:flex;gap:20px;flex-wrap:wrap;padding:21px 0;align-items:center;font-size:.91rem;color:var(--muted)}.qa b{color:var(--mint2)}
+    .faq{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.faq article{border-bottom:1px solid #21434a;padding:10px 0}.faq h3{font-size:1.02rem;margin:0 0 8px}.faq p{margin:0 0 12px;color:var(--muted)}
+    .end{background:#0d2429;border-top:1px solid #23535a;padding:50px 0}.endinner{display:flex;justify-content:space-between;gap:20px;align-items:center}.endinner h2{font-size:2rem;margin:0 0 10px}.endinner p{margin:0;color:var(--muted);max-width:580px}
+    footer{padding:27px 0;color:#94aeb0;font-size:.82rem;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}footer a{color:inherit}
+    @media(max-width:920px){.hero{grid-template-columns:1fr;gap:32px;padding:66px 0}.terminal{transform:none}.grid{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.mini-nav{gap:10px}}@media(max-width:550px){.container{padding:0 20px}.nav{height:75px}.mini-nav a:not(.navcta){display:none}.hero{padding:56px 0 70px}.terminal pre{font-size:.76rem;padding:18px 14px}.faq{grid-template-columns:1fr}.endinner{display:block}.endinner .button{margin-top:22px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="nav" aria-label="Navigație principală">
+      <a class="brand" href="#home" aria-label="Conway Solana Sentinel">CONWAY<span>_</span>SENTINEL</a>
+      <div class="mini-nav"><a href="#capabilitati">Ce face</a><a href="#pret">Preț</a><a href="#faq">Întrebări</a><a class="navcta" href="https://github.com/MaxGab/conway-solana-sentinel/issues/new?template=comanda.yml">Solicită configurare →</a></div>
+    </nav>
+    <main id="home">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">MONITORIZARE SOLANA • FĂRĂ ACCES LA FONDURI</p>
+          <h1>Portofelul tău.<br><em>Fără surprize.</em></h1>
+          <p class="sub">Monitorizează soldul SOL și activitatea unui portofel Solana, primește rapoarte și alerte — fără să conectezi Phantom și fără să dezvălui cheia privată.</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/MaxGab/conway-solana-sentinel/issues/new?template=comanda.yml">Solicită configurare · 300 lei →</a>
+            <a class="button secondary" href="#cum-functioneaza">Vezi cum funcționează</a>
+          </div>
+          <p class="tiny">Program Python local • Python 3.10+ • Citește numai informații publice on-chain</p>
+        </div>
+        <div class="terminal" aria-label="Exemplu ilustrativ de interfață terminal">
+          <div class="terminalbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><div class="filename">sentinel-demo.txt</div></div>
+          <pre><span class="faint"># Exemplu ilustrativ, nu date reale</span>
+<span class="green">$</span> python3 sentinel.py PUBLIC_ADDRESS
+
+<span class="faint">NETWORK</span>      solana-mainnet
+<span class="faint">MODE</span>         read-only
+<span class="faint">BALANCE</span>      1.245000000 SOL
+<span class="faint">TX HISTORY</span>   3 signatures
+
+<span class="green">✓</span> Confirmed  2026-10-17T...
+<span class="green">✓</span> Confirmed  2026-10-16T...
+<span class="green">✓</span> Confirmed  2026-10-15T...
+
+<span class="faint">STATUS</span>       <span class="green">READY TO WATCH</span>
+<span class="faint">PRIVATE KEY</span>  NOT REQUIRED</pre>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="line"></div>
+  <div class="container">
+    <section id="capabilitati" aria-labelledby="beneficii">
+      <div class="sectiontop"><p class="eyebrow">CE PRIMEȘTI</p><h2 id="beneficii">Monitorizare clară. Fără acces la portofel.</h2><p>Un instrument instalat și configurat pentru tine. Fără abonament software obligatoriu și fără cereri de semnare a tranzacțiilor.</p></div>
+      <div class="grid">
+        <article class="card"><div class="symbol">↗</div><h3>Sold SOL la cerere</h3><p>Verifică soldul on-chain pentru orice adresă publică Solana și primește date lizibile sau JSON.</p></article>
+        <article class="card"><div class="symbol">≡</div><h3>Istoric tranzacții</h3><p>Primești semnături de tranzacții, stări, timestamp-uri și linkuri directe către Solscan.</p></article>
+        <article class="card"><div class="symbol">◉</div><h3>Notificări la activitate</h3><p>Mod de monitorizare periodică, cu deduplicare și posibilitate de trimitere către un webhook HTTPS.</p></article>
+      </div>
+    </section>
+    <section id="cum-functioneaza" class="line" aria-labelledby="flow"><div class="sectiontop"><p class="eyebrow">TREI PAȘI</p><h2 id="flow">Din adresă publică la raport.</h2></div>
+      <div class="grid">
+        <article class="card"><div class="symbol">01 /</div><h3>Trimiți o adresă publică</h3><p>Fără seed phrase, fără cheie privată, fără conectare wallet. Nu avem dreptul să cheltuim fondurile.</p></article>
+        <article class="card"><div class="symbol">02 /</div><h3>Configurăm monitorul</h3><p>Stabilim endpoint RPC, frecvența de verificare, formatul raportului și eventualele notificări.</p></article>
+        <article class="card"><div class="symbol">03 /</div><h3>Primești aplicația</h3><p>Predăm fișierele, instrucțiunile și o demonstrație pe date publice. Poți rula local.</p></article>
+      </div>
+    </section>
+    <section id="pret" class="line" aria-labelledby="pricing"><div class="sectiontop"><p class="eyebrow">OFERTĂ DE LANSARE</p><h2 id="pricing">Configurare personalizată, preț fix.</h2></div>
+      <div class="columns">
+        <div class="pricing">
+          <div class="tag">CUSTOM SETUP</div>
+          <div class="price">300 <small>RON / configurare</small></div>
+          <p class="desc">Preț orientativ brut, pentru un proiect cu domeniu limitat. Stabilim și confirmăm condițiile înainte de plată.</p>
+          <ul class="check">
+            <li>Programul Python read-only, testat</li>
+            <li>Configurarea adreselor publice Solana</li>
+            <li>Rapoarte text și JSON</li>
+            <li>Ghid pentru alertare webhook HTTPS</li>
+            <li>Instrucțiuni de instalare și demonstrație</li>
+          </ul>
+          <a class="button" href="https://github.com/MaxGab/conway-solana-sentinel/issues/new?template=comanda.yml">Trimite o cerere gratuită →</a>
+        </div>
+        <div class="notes">
+          <h3>Ce este verificat?</h3>
+          <p>Versiunea 1.0 a trecut <strong>13 teste automate</strong> și o verificare live prin RPC Solana Mainnet. Aceste teste nu garantează disponibilitatea tuturor furnizorilor RPC.</p>
+          <h3>Ce nu promitem?</h3>
+          <p>Nu cumpărăm sau vindem tokenuri, nu calculăm profitul portofelului și nu facem recomandări financiare. Versiunea 1.0 <strong>nu urmărește automat toate soldurile SPL</strong>.</p>
+          <h3>Cum plătesc?</h3>
+          <p>Mai întâi trimiți cererea și discutăm cerințele. Plata și termenele se stabilesc explicit înainte de începerea lucrării, preferabil cu escrow unde este disponibil. <strong>Nu trimite bani către adrese postate în comentarii.</strong></p>
+        </div>
+      </div>
+      <div class="qa"><span><b>✓</b> Fără chei private</span><span><b>✓</b> 13 teste automate trecute</span><span><b>✓</b> Date publice Solana Mainnet</span></div>
+    </section>
+    <section id="faq" class="line" aria-labelledby="questions">
+      <div class="sectiontop"><p class="eyebrow">ÎNTREBĂRI FRECVENTE</p><h2 id="questions">Tot ce trebuie să știi.</h2></div>
+      <div class="faq">
+        <article><h3>Poate aplicația să-mi retragă SOL?</h3><p>Nu. Folosește exclusiv adresa publică și metode RPC de citire. Nu are acces la cheile private.</p></article>
+        <article><h3>Funcționează și cu Phantom?</h3><p>Da, pentru orice adresă publică validă Solana. Nu trebuie să conectezi extensia Phantom.</p></article>
+        <article><h3>Pot primi notificări pe telefon?</h3><p>Aplicația poate trimite webhook-uri HTTPS. Destinația și eventualul serviciu de notificare se configurează separat.</p></article>
+        <article><h3>Îmi arată și toate meme coin-urile?</h3><p>Nu în versiunea 1.0. Monitorizează soldul SOL și semnăturile de tranzacții, nu toate deținerile SPL sau profitul lor.</p></article>
+      </div>
+    </section>
+  </div>
+  <div class="end">
+    <div class="container endinner"><div><p class="eyebrow">START</p><h2>Pregătit pentru un monitor Solana?</h2><p>Cererea inițială nu implică nicio plată. Descrie funcția dorită, fără parole, seed phrase sau chei.</p></div><a class="button" href="https://github.com/MaxGab/conway-solana-sentinel/issues/new?template=comanda.yml">Solicită configurare →</a></div>
+  </div>
+  <div class="container"><footer><span>© 2026 Conway Solana Sentinel — proiect autonom experimental, produse verificate înainte de livrare.</span><span><a href="https://github.com/MaxGab/conway-solana-sentinel">Cod și solicitări</a> · <a href="#home">Sus ↑</a></span></footer></div>
+</body>
+</html>

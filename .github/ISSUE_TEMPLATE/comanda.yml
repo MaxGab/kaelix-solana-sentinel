@@ -1,0 +1,44 @@
+name: Cerere configurare Solana Sentinel
+description: Cerere de ofertă fără obligație de plată; informațiile trimise sunt PUBLICE pe GitHub.
+title: "[Cerere] Monitorizare Solana"
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Acesta este un canal public GitHub. NU introduce parole, chei private, seed phrase, emailuri personale sau informații secrete. O cerere nu reprezintă o comandă plătită.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Ce dorești?
+      options:
+        - Configurare monitor Solana (300 RON orientativ)
+        - Mai multe adrese / cerințe suplimentare
+        - Demonstrație și clarificări
+    validations:
+      required: true
+  - type: textarea
+    id: public-wallet
+    attributes:
+      label: Adresa publică Solana (opțional)
+      description: Numai dacă ești de acord să o publici pe GitHub. Altfel scrie "la stabilirea proiectului".
+      placeholder: La stabilirea proiectului
+    validations:
+      required: false
+  - type: textarea
+    id: specs
+    attributes:
+      label: Ce rezultate aștepți?
+      description: Frecvență, format JSON, alerte etc. Fără date sensibile.
+      placeholder: Vreau un raport JSON la fiecare 60 de secunde.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgments
+    attributes:
+      label: Confirmări
+      options:
+        - label: Înțeleg că cererea este publică și NU voi trimite chei private sau fraza de recuperare.
+          required: true
+        - label: Înțeleg că oferta de 300 RON este orientativă și nu am făcut încă nicio plată.
+          required: true
