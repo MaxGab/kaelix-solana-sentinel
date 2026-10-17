@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Find what may be costing your website enquiries. KAELIX LeakCheck combines free Google Lighthouse mobile diagnostics with a 60-second conversion checklist. No signup or paywall.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KAELIX LeakCheck — Is your website leaking customers?">
+<meta property="og:description" content="Free website mobile performance checks + a 60-second conversion self-assessment. Get actionable fixes, no signup.">
+<meta property="og:url" content="https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html">
+<link rel="canonical" href="https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html">
+<title>Free Website Conversion Check | KAELIX LeakCheck</title>
+<style>
+:root{color-scheme:dark;--bg:#080b16;--surface:#121729;--surface2:#171d35;--edge:#343a5c;--white:#f4f7ff;--muted:#b4bfda;--mint:#86f4cf;--violet:#ae99ff;--warning:#ffd299}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 800px 500px at 85% -10%,#402e7357,transparent),radial-gradient(ellipse 900px 500px at -20% 26%,#044f5252,transparent),var(--bg);color:var(--white);font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}button,a{touch-action:manipulation}:focus-visible{outline:3px solid var(--mint);outline-offset:3px}
+.container{width:min(1180px,100% - 44px);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:25px 0;border-bottom:1px solid #303b55;gap:16px}.logo{font-weight:900;letter-spacing:.15em;font-size:1.08rem}.logo b{color:var(--mint)}.nav-right{display:flex;gap:23px;align-items:center;font-size:.9rem;color:#b4bdd6}.nav-right a:hover{color:#fff}
+.nav-right .navlink{border:1px solid #6575a4;padding:9px 15px;border-radius:10px;color:#fff}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:47px;align-items:center;padding:78px 0 69px}.eyebrow{color:var(--mint);font-size:.77rem;font-weight:850;letter-spacing:.2em;text-transform:uppercase;margin:0 0 17px}.hero h1{font-size:clamp(3.15rem,6vw,5.65rem);line-height:1.04;letter-spacing:-.065em;margin:0 0 23px}.hero h1 em{font-style:normal;color:var(--mint)}.hero p.desc{color:#c6d0e5;font-size:1.14rem;max-width:620px;margin:0 0 26px}.pills{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}.pill{border:1px solid #414a67;background:#1c2334a9;border-radius:99px;padding:7px 11px;font-size:.76rem;color:#d7e8ee}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;background:var(--mint);color:#081b1b;border:1px solid var(--mint);border-radius:11px;padding:13px 18px;font-weight:850;transition:transform .18s,filter .18s;text-align:center;min-height:48px}.btn:hover{filter:brightness(1.06);transform:translateY(-2px)}.btn.secondary{background:#171f34;color:var(--white);border-color:#606d91}.btn.full{width:100%}.btn.small{padding:10px 14px;min-height:42px;font-size:.9rem}.actions{display:flex;gap:11px;flex-wrap:wrap}
+.hero-visual{border:1px solid #495377;border-radius:24px;background:linear-gradient(145deg,#222846,#111927);padding:23px;box-shadow:0 28px 70px #0008;position:relative;overflow:hidden}.hero-visual:before{content:"";position:absolute;inset:-20% -25% auto auto;width:280px;height:280px;background:radial-gradient(circle,#7d61c955,transparent 70%);pointer-events:none}.visual-header{display:flex;align-items:center;gap:7px;color:#a7b7d1;border-bottom:1px solid #39425e;padding-bottom:15px;font:.8rem ui-monospace,Consolas,monospace}.dot{width:8px;height:8px;background:#f4a5ae;border-radius:50%}.dot:nth-child(2){background:#edc87c}.dot:nth-child(3){background:#81e3c0}.visual-header span:last-child{margin-left:auto}.bigstat{font-size:5.7rem;letter-spacing:-.08em;line-height:1.2;color:var(--mint);font-weight:850;margin:27px 0 0}.visual-sub{color:#c4d0e5;font-size:.85rem;margin:-6px 0 24px}.ghostbar{height:13px;background:#10182b;border-radius:12px;overflow:hidden;margin:16px 0}.ghostbar i{display:block;height:100%;background:linear-gradient(90deg,var(--violet),var(--mint));border-radius:12px}.visual-line{display:flex;justify-content:space-between;color:#cad4e9;font-size:.8rem}
+section{padding:65px 0}.section-head{max-width:850px;margin-bottom:28px}.section-head h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.12;letter-spacing:-.055em;margin:0 0 12px}.section-head p{color:var(--muted);margin:0}
+.card{background:linear-gradient(135deg,#171f35,#101626);border:1px solid var(--edge);border-radius:20px;padding:26px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.label{display:block;font-size:.88rem;font-weight:750;margin:4px 0 10px}.url-input{width:100%;min-height:54px;border:1px solid #566487;background:#0c1426;border-radius:11px;padding:14px 15px;color:#f7f9ff}.helper{font-size:.8rem;color:#aabbd1;margin:10px 0 18px}.helper a{color:var(--mint);text-decoration:underline}.status{min-height:23px;color:#dfebff;font-size:.88rem;margin:13px 0 4px}.status[data-error="true"]{color:#ffd49d}.result{margin:19px 0 0;border-top:1px solid #343c56;padding-top:20px}.hidden{display:none!important}.score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.score{border:1px solid #425477;background:#0e1b2b;padding:15px 10px;border-radius:12px;text-align:center}.score strong{font-size:1.75rem;display:block;letter-spacing:-.05em}.score small{color:#b9c9dc;font-size:.76rem}.score[data-level="good"] strong{color:var(--mint)}.score[data-level="mid"] strong{color:#ffe0a6}.score[data-level="low"] strong{color:#ff9faf}.tips{margin-top:18px}.tips h3{font-size:1rem;margin:0 0 10px}.tip{border-left:3px solid #9e91ec;background:#131d31;padding:10px 12px;border-radius:4px;margin:8px 0;color:#d9e7f5;font-size:.88rem}.result a{text-decoration:underline;color:var(--mint)}
+.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.question{border:1px solid #3c4764;background:#10182a;border-radius:13px;padding:16px;min-width:0}.question strong{display:block;font-size:.94rem;margin-bottom:10px}.question select{width:100%;padding:10px 12px;color:#f5f7ff;background:#1e2840;border:1px solid #536281;border-radius:9px;font:inherit}.progress{font-size:.79rem;color:#a2b7d1;margin-top:13px}
+.report{margin-top:22px;border:1px solid #5e6c8a;border-radius:17px;padding:23px;background:#18243b}.report h3{margin:0 0 8px;font-size:1.4rem}.report p{color:#c8d6e6}.report ul{padding-left:22px}.report li{margin:9px 0}.report .scoreline{font-size:1.9rem;color:var(--mint);font-weight:850}.report .smalltext{font-size:.8rem;color:#b2bdd1}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.product{border:1px solid #465273;background:linear-gradient(160deg,#18243a,#0d1728);border-radius:18px;padding:25px}.product.highlight{border-color:#78bbaf;background:linear-gradient(145deg,#163439,#141b30)}.product .icon{font-size:1.6rem;color:var(--mint)}.product h3{font-size:1.24rem;margin:12px 0}.product p{color:#becde1;font-size:.91rem;min-height:86px}.product .money{font-size:2rem;font-weight:900;letter-spacing:-.06em;margin:18px 0}.product .money span{font-size:.77rem;letter-spacing:0;font-weight:450;color:#b8c8d4}.product .btn{width:100%}
+.truth{padding:20px 23px;background:#111c2b;border:1px solid #2b4657;border-radius:13px;margin-top:24px;color:#afc6d5;font-size:.86rem}.cta{background:linear-gradient(135deg,#103435,#1f2445);padding:37px;border:1px solid #4b887f;border-radius:20px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{font-size:2rem;margin:0 0 8px;letter-spacing:-.04em}.cta p{margin:0;color:#c2d3da;max-width:650px}.cta .actions{flex-shrink:0}
+footer{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid #293d50;padding:25px 0 35px;color:#9caec3;font-size:.82rem}
+@media(max-width:960px){.hero{grid-template-columns:1fr}.hero-visual{max-width:650px}.products{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:670px){.container{width:min(100% - 28px,1180px)}.hero{padding:52px 0}.nav-right a:not(.navlink){display:none}.checks,.products{grid-template-columns:1fr}.card{padding:20px}.hero h1{font-size:clamp(2.7rem,11vw,4rem)}.bigstat{font-size:4.2rem}.cta{flex-direction:column;align-items:flex-start;padding:25px}.cta .actions{width:100%}.cta .btn{width:100%}section{padding:45px 0}}
+@media(prefers-reduced-motion:reduce){.btn{transition:none}html{scroll-behavior:auto}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"KAELIX LeakCheck","url":"https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html","description":"Free mobile Lighthouse diagnostics and user-reported website conversion checklist.","applicationCategory":"BusinessApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}</script>
+</head>
+<body>
+<div class="container">
+<nav class="nav" aria-label="Main">
+<a class="logo" href="services.html" aria-label="KAELIX Studio"><b>K</b>AELIX / LEAKCHECK</a>
+<div class="nav-right"><a href="services.html">All services</a><a href="#method">How it works</a><a class="navlink" href="#fix">Fix my site →</a></div>
+</nav>
+<main>
+<section class="hero" id="top">
+<div>
+<p class="eyebrow">Free website health &amp; lead-conversion check</p>
+<h1>Is your website <em>leaking customers?</em></h1>
+<p class="desc">Your homepage can look great and still make people leave. Get Google Lighthouse mobile diagnostics and a 60-second conversion checklist. Find the next fix worth making.</p>
+<div class="actions"><a href="#audit" class="btn">Test my website — free ↗</a><a href="#fix" class="btn secondary">See fixed-price help</a></div>
+<div class="pills"><span class="pill">No signup</span><span class="pill">Google Lighthouse data</span><span class="pill">Mobile-first</span><span class="pill">Honest self-check</span></div>
+</div>
+<div class="hero-visual" aria-label="Illustration; sample result is not from a real website">
+<div class="visual-header"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span>sample-report.local</span></div>
+<div class="bigstat">62<span style="font-size:1.7rem;color:#b4c5dd"> / 100</span></div>
+<p class="visual-sub">Illustrative score only · not an actual scan</p>
+<div class="visual-line"><span>Mobile performance</span><span>Needs attention</span></div><div class="ghostbar"><i style="width:62%"></i></div>
+<div class="visual-line"><span>Clear call to action</span><span>Check your homepage</span></div><div class="ghostbar"><i style="width:40%"></i></div>
+<div class="visual-line"><span>Recommended next step</span><span>Make contact easier →</span></div>
+</div>
+</section>
+<section id="audit">
+<div class="section-head"><p class="eyebrow">01 / check what can be measured</p><h2>Get a real mobile Lighthouse snapshot.</h2><p>Enter a public website. Your browser requests Google's PageSpeed Insights API directly. These are lab diagnostics, not a measure of actual sales or a guaranteed conversion forecast.</p></div>
+<div class="grid">
+<div class="card">
+<label class="label" for="site-url">Your public website URL</label>
+<input class="url-input" id="site-url" type="url" inputmode="url" maxlength="500" autocomplete="url" placeholder="https://yourbusiness.com" aria-describedby="url-helper">
+<p class="helper" id="url-helper">For public sites only. By running the check, your URL is sent from your browser to Google's PageSpeed Insights service. KAELIX does not receive or store it.</p>
+<button class="btn full" id="run-scan" type="button">Run free mobile diagnostics ↗</button>
+<p class="status" id="scan-status" role="status" aria-live="polite">Ready. No email required.</p>
+<p class="helper">Public Google API may be unavailable or rate-limited. If so, use <a href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">the official PageSpeed Insights website ↗</a> and the checklist below.</p>
+</div>
+<div class="card">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:12px"><span class="eyebrow" style="margin:0">LIVE RESULTS / GOOGLE</span><span style="font-size:.76rem;color:#afbdce">Mobile</span></div>
+<div id="scan-empty" style="padding:50px 0 35px;color:#b7c5da;text-align:center"><div style="font-size:3rem;margin-bottom:7px;color:#86f4cf">◎</div>Run the check to show verified Google scores here.<br>We never invent a performance score.</div>
+<div id="scan-results" class="result hidden">
+<div class="score-grid">
+<div class="score" id="score-performance"><strong>—</strong><small>Performance</small></div>
+<div class="score" id="score-accessibility"><strong>—</strong><small>Accessibility</small></div>
+<div class="score" id="score-seo"><strong>—</strong><small>SEO</small></div>
+</div>
+<div class="tips"><h3>Issues highlighted by Lighthouse</h3><div id="audit-tips"></div></div>
+<p class="helper" id="scan-source">Source: Google PageSpeed Insights / Lighthouse. Lab results can vary between runs.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="selfcheck">
+<div class="section-head"><p class="eyebrow">02 / the parts a scanner cannot know</p><h2>Could a visitor become a customer in 60 seconds?</h2><p>Answer honestly about your own website. The result is based only on your answers and is clearly separate from Lighthouse.</p></div>
+<div class="checks" id="checklist">
+<div class="question"><strong>1. Is your offer clear without scrolling?</strong><select aria-label="Offer clarity" data-topic="Offer clarity" data-tip="Rewrite the first headline to say who you help and the specific result." ><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>2. Is there one obvious action to take?</strong><select aria-label="Main action" data-topic="Primary call to action" data-tip="Place one clear contact or quote button above the fold."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>3. Can mobile visitors contact you in one tap?</strong><select aria-label="Mobile contact" data-topic="Mobile contact" data-tip="Make the phone, message or quote action visible and tap-friendly on mobile."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>4. Is your enquiry form short and working?</strong><select aria-label="Form friction" data-topic="Enquiry form" data-tip="Reduce unnecessary fields, validate input and test a real submission."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>5. Do you show believable proof of your work?</strong><select aria-label="Trust proof" data-topic="Trust signals" data-tip="Add a genuine project example, verified testimonial or clear credentials — never invented reviews."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>6. Do visitors see prices or a clear next step?</strong><select aria-label="Price clarity" data-topic="Pricing clarity" data-tip="State a starting price or explain exactly how the quote process works."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>7. Have you personally tested the page on mobile?</strong><select aria-label="Mobile usability" data-topic="Mobile usability" data-tip="Test the full journey on a phone, including tapping buttons and submitting the form."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+<div class="question"><strong>8. Can you tell which enquiries came from the site?</strong><select aria-label="Conversion tracking" data-topic="Lead tracking" data-tip="Add privacy-respecting enquiry tracking so you can measure real leads rather than guessing."><option value="x">Select an answer</option><option value="y">Yes</option><option value="n">No</option><option value="u">Not sure</option></select></div>
+</div>
+<div class="card" style="margin-top:17px">
+<div class="actions"><button id="generate-report" type="button" class="btn">Show my action plan ↗</button><button id="reset-checks" type="button" class="btn secondary">Reset answers</button></div>
+<p id="check-progress" class="progress" role="status" aria-live="polite">0 / 8 questions answered</p>
+<div id="check-results" class="report hidden">
+<h3>Your conversion readiness self-check</h3>
+<div id="check-score" class="scoreline"></div>
+<p id="check-summary"></p><h4>Priorities to review</h4><ul id="check-priorities"></ul>
+<p class="smalltext">This is a transparent questionnaire, not an automated audit, revenue forecast or guarantee of results.</p>
+<div class="actions"><button type="button" class="btn small secondary" id="copy-report">Copy my action plan</button><button type="button" class="btn small secondary" id="share-report">Share this free tool ↗</button><a class="btn small" id="report-quote" href="#fix">Ask KAELIX to fix these →</a></div>
+<p class="status" id="copy-status" aria-live="polite"></p>
+</div>
+</div>
+</section>
+<section id="fix">
+<div class="section-head"><p class="eyebrow">03 / fix the issue, not the whole internet</p><h2>Want someone to handle the actual fixes?</h2><p>KAELIX Studio offers small, clearly scoped engineering services. These are starting prices, not automatic charges. We agree on the scope, deliverables, timeframe and payment method in writing before work starts.</p></div>
+<div class="products">
+<article class="product"><span class="icon">◇</span><h3>Free LeakCheck</h3><p>Run Google Lighthouse diagnostics when available and complete the website conversion checklist. No signup or charge.</p><div class="money">€0 <span>/ always free</span></div><a class="btn secondary" href="#audit">Run free check ↗</a></article>
+<article class="product"><span class="icon">⌁</span><h3>Human-reviewed website audit</h3><p>A scoped review of one public website with a prioritized list of practical issues and suggested improvements.</p><div class="money">€35 <span>/ starting price</span></div><a class="btn secondary" href="mailto:contact@kaelix.studio?subject=KAELIX%20Website%20Audit%20Inquiry%20%E2%82%AC35&amp;body=Hello%20KAELIX%2C%0AI%20would%20like%20a%20quote%20for%20a%20website%20audit.%0AWebsite%3A%20%0AThe%20main%20problem%20is%3A%20%0A">Request a €35 audit ↗</a></article>
+<article class="product highlight"><span class="icon">⚡</span><h3>Website Fix Sprint</h3><p>Up to three small, clearly defined changes to a single website, subject to code access and a written feasibility review. Not a full rebuild.</p><div class="money">€89 <span>/ proposed starting price</span></div><a class="btn" id="fix-quote" href="mailto:contact@kaelix.studio?subject=KAELIX%20Website%20Fix%20Sprint%20Inquiry&amp;body=Hello%20KAELIX%2C%0AI%20would%20like%20a%20quote%20for%20the%20Website%20Fix%20Sprint.%0AMy%20website%3A%20%0AMy%20main%20issue%3A%20%0A">Ask for a fix quote ↗</a></article>
+</div>
+<div class="truth" id="method"><strong style="color:#e4f8f4">How it works.</strong> The browser sends any requested Lighthouse check straight to Google. The eight conversion questions are self-reported and scored locally. We do not take payments or receive your answers on this page. Sending the optional quote email opens your own email app; no order is placed automatically. If an email app is not available, contact <a style="color:#86f4cf;text-decoration:underline" href="https://ig.me/m/kaelix_hq" target="_blank" rel="noopener noreferrer">@kaelix_hq on Instagram</a>. Never share passwords, customer records or private API keys in a first inquiry.</div>
+</section>
+<section>
+<div class="cta"><div><p class="eyebrow" style="margin:0 0 9px">Time to turn visitors into real enquiries</p><h2>Fix one high-friction step at a time.</h2><p>Send a website URL, your most important goal, and the issue you've noticed. We'll scope an offer; no subscription or financial-performance promise.</p></div><div class="actions"><a class="btn" href="mailto:contact@kaelix.studio?subject=KAELIX%20Website%20Project%20Inquiry&amp;body=Hello%20KAELIX%2C%0AMy%20website%3A%20%0AWhat%20I%20want%20to%20improve%3A%20%0A">Request a quote ↗</a><a class="btn secondary" href="https://ig.me/m/kaelix_hq" target="_blank" rel="noopener noreferrer">DM us ↗</a></div></div>
+</section>
+</main>
+<footer><span>© 2026 KAELIX Studio · Independent technical services · No guaranteed revenue claims.</span><span><a href="services.html">All services</a> · <a href="https://github.com/MaxGab/kaelix-solana-sentinel">Source &amp; projects</a></span></footer>
+</div>
+<script>
+(function(){
+'use strict';
+const $ = function(id){return document.getElementById(id);};
+const scanBtn = $('run-scan'), scanStatus = $('scan-status'), scanResults=$('scan-results'), scanEmpty=$('scan-empty');
+function validUrl(raw){
+ let s=String(raw||'').trim();
+ if(!s)throw new Error('Enter a public website URL first.');
+ if(!/^https?:\/\//i.test(s))s='https://'+s;
+ let u;try{u=new URL(s);}catch(e){throw new Error('Please enter a valid website URL.');}
+ if(!/^https?:$/.test(u.protocol)||!u.hostname||u.username||u.password||u.hostname==='localhost'||u.hostname.endsWith('.local')||/^(127\.|10\.|192\.168\.|169\.254\.|0\.0\.0\.0|::1$)/.test(u.hostname))throw new Error('Use a public HTTP(S) website URL, not a private host.');
+ u.hash='';
+ return u.href;
+}
+function setScore(name,cat){
+ const n=$('score-'+name), big=n.querySelector('strong');
+ const value=cat&&typeof cat.score==='number'?Math.round(cat.score*100):null;
+ big.textContent=value===null?'n/a':String(value);
+ n.dataset.level=value===null?'mid':value>=90?'good':value>=50?'mid':'low';
+}
+function appendIssue(title,description){
+ const p=document.createElement('div');p.className='tip';
+ const head=document.createElement('strong');head.textContent=title;
+ const desc=document.createElement('span');desc.textContent=description?' — '+description:'';
+ p.append(head,desc);$('audit-tips').appendChild(p);
+}
+scanBtn.addEventListener('click',async function(){
+ let url;try{url=validUrl($('site-url').value);}catch(e){scanStatus.textContent=e.message;scanStatus.dataset.error='true';return;}
+ scanStatus.dataset.error='false';scanStatus.textContent='Requesting a mobile Lighthouse report from Google…';
+ scanBtn.disabled=true;scanBtn.textContent='Checking Google diagnostics…';scanResults.classList.add('hidden');scanEmpty.classList.remove('hidden');
+ const ctrl=new AbortController(),timer=setTimeout(function(){ctrl.abort();},25000);
+ try{
+ const endpoint=new URL('https://www.googleapis.com/pagespeedonline/v5/runPagespeed');
+ endpoint.searchParams.set('url',url);endpoint.searchParams.set('strategy','mobile');
+ ['PERFORMANCE','ACCESSIBILITY','SEO'].forEach(function(cat){endpoint.searchParams.append('category',cat);});
+ const response=await fetch(endpoint.toString(),{signal:ctrl.signal,mode:'cors'});
+ if(!response.ok)throw new Error('Google did not return a report (HTTP '+response.status+'). It may be rate-limited.');
+ const data=await response.json(),lh=data.lighthouseResult,cats=lh&&lh.categories;
+ if(!cats)throw new Error('Google did not return Lighthouse results.');
+ ['performance','accessibility','seo'].forEach(function(name){setScore(name,cats[name]);});
+ $('audit-tips').replaceChildren();
+ const auditMap=lh.audits||{};
+ const refs=[...((cats.performance&&cats.performance.auditRefs)||[]),...((cats.accessibility&&cats.accessibility.auditRefs)||[]),...((cats.seo&&cats.seo.auditRefs)||[])];
+ const seen=new Set();let count=0;
+ refs.forEach(function(ref){
+ if(count>=4||!ref||seen.has(ref.id))return;seen.add(ref.id);
+ const a=auditMap[ref.id];if(!a||a.scoreDisplayMode==='notApplicable'||typeof a.score!=='number'||a.score>=0.9||!a.title)return;
+ appendIssue(a.title,typeof a.displayValue==='string'?a.displayValue:'Review this Lighthouse finding.');count++;
+ });
+ if(!count)appendIssue('No major flagged opportunities in the selected categories','Review the detailed Google report for context.');
+ $('scan-source').textContent='Google Lighthouse lab snapshot for '+new URL(url).hostname+' (mobile). Results vary; this does not estimate actual sales.';
+ scanResults.classList.remove('hidden');scanEmpty.classList.add('hidden');scanStatus.textContent='Google mobile diagnostic finished. Scroll down for your conversion self-check.';
+ }catch(e){
+ const timed=ctrl.signal.aborted;
+ scanStatus.textContent=(timed?'The public Google check timed out. ':e.message+' ')+'This is not a website score. You can try pagespeed.web.dev directly and complete the checklist below.';
+ scanStatus.dataset.error='true';
+ }finally{clearTimeout(timer);scanBtn.disabled=false;scanBtn.textContent='Run free mobile diagnostics ↗';}
+});
+const selects=Array.from(document.querySelectorAll('#checklist select'));
+let summaryText='';
+function progress(){const n=selects.filter(function(s){return s.value!=='x';}).length;$('check-progress').textContent=n+' / '+selects.length+' questions answered';}
+selects.forEach(function(s){s.addEventListener('change',progress);});progress();
+$('reset-checks').addEventListener('click',function(){selects.forEach(function(s){s.value='x';});$('check-results').classList.add('hidden');$('check-progress').textContent='0 / 8 questions answered';});
+$('generate-report').addEventListener('click',function(){
+ const open=selects.filter(function(s){return s.value==='x';});
+ if(open.length){$('check-progress').textContent='Answer all 8 questions to get a meaningful result ('+open.length+' remaining).';return;}
+ const yes=selects.filter(function(s){return s.value==='y';}).length;
+ const score=Math.round(100*yes/selects.length);
+ const risks=selects.filter(function(s){return s.value!=='y';});
+ $('check-score').textContent=score+' / 100 · self-reported';
+ $('check-summary').textContent=risks.length===0?'You marked all eight basics as present. Check that they work in practice and measure actual enquiries.':'You marked '+risks.length+' area'+(risks.length===1?'':'s')+' to confirm or improve. Start with the actions below.';
+ const ul=$('check-priorities');ul.replaceChildren();
+ const chosen=risks.slice(0,5);
+ if(!chosen.length){const li=document.createElement('li');li.textContent='Test your live enquiry journey and check whether it generates genuine leads.';ul.appendChild(li);}
+ chosen.forEach(function(s){const li=document.createElement('li');const b=document.createElement('strong');b.textContent=s.dataset.topic+': ';li.append(b,document.createTextNode(s.dataset.tip));ul.appendChild(li);});
+ summaryText='KAELIX LeakCheck — self-reported conversion check\nScore: '+score+'/100 based only on my answers\n'+risks.map(function(s){return '- '+s.dataset.topic+': '+s.dataset.tip;}).join('\n')+'\nFree check: https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html';
+ if(!risks.length)summaryText+='\nAll questionnaire items marked yes; this is not proof of conversion performance.';
+ const body='Hello KAELIX, I would like a scoped quote for my website.\nWebsite: '+($('site-url').value.trim()||'[my website URL]')+'\nSelf-reported checklist: '+score+'/100\nItems to review:\n'+risks.map(function(s){return s.dataset.topic;}).join(', ')+'\nPlease suggest an appropriate paid scope and price.';
+ $('report-quote').href='mailto:contact@kaelix.studio?subject='+encodeURIComponent('KAELIX LeakCheck — Website quote')+'&body='+encodeURIComponent(body);
+ $('fix-quote').href=$('report-quote').href;
+ $('check-results').classList.remove('hidden');$('check-progress').textContent='Results prepared locally. Nothing was submitted.';
+ $('check-results').scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+$('copy-report').addEventListener('click',async function(){try{await navigator.clipboard.writeText(summaryText);$('copy-status').textContent='Action plan copied.';}catch(e){$('copy-status').textContent='Copy unavailable in this browser. You can select the result text manually.';}});
+$('share-report').addEventListener('click',async function(){
+ const text='Try the free KAELIX LeakCheck: mobile Lighthouse diagnostics + a no-signup website conversion checklist.';
+ const url='https://maxgab.github.io/kaelix-solana-sentinel/leadcheck.html';
+ if(navigator.share){try{await navigator.share({title:'KAELIX LeakCheck',text,url});return;}catch(e){}}
+ window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(url),'_blank','noopener,noreferrer');
+});
+})();
+</script>
+</body></html>
