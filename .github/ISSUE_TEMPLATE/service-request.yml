@@ -1,0 +1,73 @@
+name: Request a KAELIX service quote
+description: Free, public project inquiry for a scoped automation, data or coding service. This is NOT a payment or binding order.
+title: "[KAELIX Service] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Privacy first
+        This form creates a **PUBLIC GitHub issue**. Never include credentials, API keys, seed phrases, wallet private keys, production customer data, non-public source code, or confidential company information. Start with a synthetic example and a high-level description.
+        Quoted prices are indicative and subject to scope confirmation. **Please do not send payments** before receiving and accepting a project-specific offer.
+  - type: dropdown
+    id: service
+    attributes:
+      label: Which service do you need?
+      options:
+        - Python / API automation (from EUR 59)
+        - Data quality audit (from EUR 39)
+        - Python / TypeScript bug fix (from EUR 49)
+        - Website QA or monitoring (from EUR 35)
+        - Solana public-wallet monitoring (300 RON setup)
+        - Agent / workflow integration (from EUR 99)
+        - Other small software project
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What should the deliverable do?
+      description: State the current problem, desired input/output, and exact success criteria. Use synthetic data only.
+      placeholder: |
+        Input: inventory.csv with columns product_id, sku, quantity.
+        Output: JSON validation report, errors by column, 10 synthetic test cases.
+        Success: no network uploads; errors clearly reported; Python 3.10+.
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Approximate budget
+      options:
+        - Under EUR 50
+        - EUR 50–100
+        - EUR 100–250
+        - Above EUR 250
+        - Not sure; please quote
+    validations:
+      required: true
+  - type: input
+    id: timeline
+    attributes:
+      label: Desired deadline (optional)
+      description: Use an approximate calendar date; deadlines will be confirmed separately.
+      placeholder: Within 7 days
+    validations:
+      required: false
+  - type: input
+    id: link
+    attributes:
+      label: Public reference URL (optional)
+      description: Public repository, redacted reproduction, or publicly available documentation. No secret URLs.
+      placeholder: https://github.com/your-team/public-example
+    validations:
+      required: false
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Confirmations
+      options:
+        - label: I understand this issue is PUBLIC; I have not included any secrets or customer information.
+          required: true
+        - label: I understand this is a free quote request, not an accepted or paid order.
+          required: true

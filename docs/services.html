@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d18">
+<meta name="robots" content="index,follow">
+<meta name="description" content="KAELIX Studio builds practical data automation, Python scripts, code fixes and read-only Solana monitoring. Explore tested samples and request a scoped quote.">
+<meta property="og:title" content="KAELIX Studio — Automation & Data Engineering">
+<meta property="og:description" content="Small, testable automation delivered with clear scope, evidence and no payment surprises. Try a local data quality demo.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://maxgab.github.io/kaelix-solana-sentinel/services.html">
+<title>KAELIX Studio — Python Automation, Data QA & Coding Services</title>
+<style>
+:root{color-scheme:dark;--bg:#090d18;--card:#101625;--edge:#293449;--text:#f5f8ff;--muted:#a9b9d0;--mint:#8cf2c4;--lilac:#afaaff;--light:#cfeeff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 65% 0%,#222550 0%,transparent 37%),radial-gradient(ellipse at -20% 25%,#0e3134 0%,transparent 31%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button,a{touch-action:manipulation}
+a:focus-visible,button:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+.wrap{max-width:1190px;margin:0 auto;padding:0 26px}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:24px 0;border-bottom:1px solid #2a3954}
+.logo{font-weight:900;letter-spacing:.16em;font-size:1.18rem}.logo span{color:var(--mint)}
+.navlinks{display:flex;align-items:center;gap:25px;font-size:.91rem;color:var(--muted)}.navlinks a:hover{color:white}
+.navcta{border:1px solid #516780;border-radius:99px;padding:9px 18px;color:white}
+.hero{padding:83px 0 78px;display:grid;grid-template-columns:1.13fr .87fr;gap:55px;align-items:center}
+.eyebrow{display:flex;gap:12px;align-items:center;color:var(--mint);font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:.77rem;margin:0 0 25px}
+.eyebrow:before{content:"";display:inline-block;background:var(--mint);width:21px;height:2px}
+h1{font-size:clamp(2.9rem,6vw,6.2rem);letter-spacing:-.075em;line-height:1.05;margin:0 0 27px}
+h1 em{font-style:normal;color:var(--mint)}h1 .fade{color:#adafff}
+.hero p.lead{color:#c0cee1;font-size:1.12rem;max-width:590px;margin:0 0 27px}
+.actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--mint);color:#07171a;padding:13px 21px;border:1px solid var(--mint);border-radius:11px;font-weight:800;cursor:pointer;transition:transform .2s,filter .2s}
+.button:hover{filter:brightness(1.08);transform:translateY(-2px)}.button.outline{background:transparent;color:#eaf1ff;border-color:#475471}
+.microcopy{font-size:.83rem;color:#a1b7c7;margin:17px 0 0}
+.visual{border:1px solid #394467;background:linear-gradient(145deg,#141e36,#101b29);border-radius:22px;box-shadow:0 32px 70px #0006;overflow:hidden;position:relative}
+.visual:before{content:"";position:absolute;inset:-90px auto auto 40%;width:350px;height:350px;pointer-events:none;background:radial-gradient(circle,#4b5dbb4a,transparent 65%)}
+.browserbar{display:flex;align-items:center;gap:8px;border-bottom:1px solid #283653;padding:17px 21px;color:#9eb1c6;font-size:.76rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#506781}.dot:first-child{background:#ee8b88}.dot:nth-child(2){background:#e5c17d}.dot:nth-child(3){background:#73c9a1}.browserbar strong{margin-left:auto;font-weight:500}
+.terminal{font: .87rem/1.95 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;position:relative;white-space:pre-wrap;padding:25px 25px 29px;color:#d7e7f5;overflow-wrap:anywhere}
+.terminal .dim{color:#8fa2b4}.terminal .success{color:#8cf2c4}.terminal .accent{color:#afaaff}
+.signal{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:16px 23px;background:#0c1929;border-top:1px solid #293a50;color:#b5c9d9;font-size:.82rem}
+.signal span:first-child:before{content:"";display:inline-block;background:#85efbf;border-radius:50%;width:7px;height:7px;margin-right:10px;box-shadow:0 0 0 4px #2058495a}
+.strip{border-top:1px solid #293348;border-bottom:1px solid #293348;background:#0e1622b3}.stripgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:22px 0}
+.metric strong{font-size:1.35rem;color:#fff;letter-spacing:-.02em;display:block}.metric span{color:var(--muted);font-size:.85rem}
+section{padding:76px 0}.topline{max-width:770px;margin-bottom:28px}h2{font-size:clamp(2rem,3.6vw,3.25rem);line-height:1.14;letter-spacing:-.045em;margin:0 0 13px}.subtitle{color:var(--muted);max-width:760px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.card{position:relative;display:flex;flex-direction:column;min-width:0;background:linear-gradient(145deg,#192038d9,#0d1522ef);border:1px solid var(--edge);border-radius:17px;padding:26px}
+.card.featured{border-color:#587e92;background:linear-gradient(135deg,#1c3040,#111b2a)}
+.card .number{color:#abaef9;font-size:.72rem;font-weight:850;letter-spacing:.16em;margin-bottom:29px}
+.card h3{font-size:1.27rem;letter-spacing:-.03em;line-height:1.25;margin:0 0 12px}
+.card p{color:var(--muted);font-size:.94rem;margin:0 0 14px}.list{padding:0;list-style:none;margin:5px 0 25px;font-size:.89rem;color:#d9e6f0}.list li{margin:7px 0}.list li:before{content:"✓";color:var(--mint);margin-right:9px}
+.cardfoot{margin-top:auto;border-top:1px solid #2e3b50;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.cardfoot strong{font-size:1.18rem;color:#f7faff}.cardfoot small{display:block;font-size:.72rem;color:#97adbe;font-weight:500}
+.cardfoot a{color:var(--mint);font-weight:750;white-space:nowrap;font-size:.86rem}.cardfoot a:hover{text-decoration:underline}
+.detail{font-size:.76rem;color:#8fa6b7;margin:18px 0 0}
+.demo{display:grid;grid-template-columns:.96fr 1.04fr;border:1px solid #3b4c68;border-radius:20px;background:#0e1729;overflow:hidden}
+.demo-intro{padding:37px 35px;background:linear-gradient(155deg,#1b2440,#102331)}
+.demo-intro .badge{display:inline-flex;padding:6px 12px;border:1px solid #56795e;border-radius:99px;background:#173b38;color:#abf9d4;font-size:.72rem;font-weight:800;letter-spacing:.12em}
+.demo-intro h3{font-size:2rem;letter-spacing:-.045em;line-height:1.18;margin:23px 0 16px}
+.demo-intro p{color:#b3c9d7;margin:0 0 20px}.demo-points{padding:0;list-style:none;margin:0}.demo-points li{color:#d5e8eb;padding:7px 0}
+.demo-form{padding:31px;background:#0a1420;display:flex;flex-direction:column;min-width:0}
+.demo-form label{font-size:.88rem;font-weight:750;margin-bottom:11px}
+select,textarea{width:100%;border:1px solid #3a5166;color:#e6f3fc;background:#121f30;border-radius:10px}
+select{min-height:45px;padding:8px 12px;margin-bottom:12px}textarea{resize:vertical;padding:13px;font: .88rem/1.7 ui-monospace,Consolas,monospace;min-height:154px}
+.demobtn{margin:12px 0;border:0;min-height:46px}
+.output{padding:16px;background:#102135;color:#d6edf1;border:1px solid #284e59;border-radius:10px;min-height:118px;white-space:pre-wrap;overflow-wrap:anywhere;font: .79rem/1.65 ui-monospace,Consolas,monospace}
+.output[data-state="error"]{border-color:#b97074;color:#ffd5d2}.output[data-state="good"]{border-color:#3b8f73}
+.privacynote{color:#a5bcc7;font-size:.8rem;margin:10px 0 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border-left:2px solid #526b89;padding:5px 0 4px 25px}.step b{display:block;color:var(--mint);font-size:.76rem;letter-spacing:.15em}.step h3{font-size:1.16rem;margin:8px 0}.step p{font-size:.91rem;color:var(--muted);margin:0}
+.faq{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.faq article{border-top:1px solid #38475c;padding:17px 4px}.faq h3{font-size:1rem;margin:0 0 8px}.faq p{margin:0;color:var(--muted);font-size:.93rem}
+.callout{background:linear-gradient(130deg,#172c37,#191d34);border-top:1px solid #435875;border-bottom:1px solid #435875}
+.callout-inner{padding:57px 0;display:flex;justify-content:space-between;align-items:center;gap:27px}.callout h2{font-size:clamp(1.8rem,3.3vw,3rem);margin:0 0 10px}.callout p{margin:0;color:var(--muted);max-width:640px}
+footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:31px 0;color:#9bb0c4;font-size:.82rem;flex-wrap:wrap}
+footer a:hover{text-decoration:underline}
+@media(max-width:950px){.hero{grid-template-columns:1fr;gap:37px;padding:66px 0}.grid{grid-template-columns:repeat(2,1fr)}.demo{grid-template-columns:1fr}.navlinks{gap:12px}}
+@media(max-width:660px){.wrap{padding:0 18px}.nav{padding:20px 0}.navlinks a:not(.navcta){display:none}.hero{padding:55px 0 65px}.grid,.steps,.faq{grid-template-columns:1fr}.stripgrid{grid-template-columns:1fr;gap:15px}section{padding:57px 0}.card{padding:22px}.demo-intro,.demo-form{padding:23px}.callout-inner{align-items:flex-start;flex-direction:column}.terminal{padding:19px;font-size:.77rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"KAELIX Studio — Automation & Data Engineering","url":"https://maxgab.github.io/kaelix-solana-sentinel/services.html","description":"Independent, scoped automation and data quality development services with free browser-side demos.","inLanguage":"en"}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav" aria-label="Main navigation">
+    <a class="logo" href="services.html" aria-label="KAELIX Studio home">KAELIX<span>_</span>STUDIO</a>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#demo">Free tools</a>
+      <a href="index.html">Solana Sentinel</a>
+      <a class="navcta" href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Request a quote →</a>
+    </div>
+  </nav>
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <p class="eyebrow">Independent automation · Built to ship</p>
+        <h1>Ship the task.<br><em>Skip the busywork.</em></h1>
+        <p class="lead">Clear-scoped Python automation, data quality tooling, code fixes and public-blockchain monitoring. Real deliverables, documented tests, transparent pricing — no mystery AI promises.</p>
+        <div class="actions">
+          <a class="button" href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Get a scoped quote ↗</a>
+          <a class="button outline" href="#demo">Try the free audit ↘</a>
+        </div>
+        <p class="microcopy">Worldwide remote delivery · No retainer required · No payment before scope agreement</p>
+      </div>
+      <div class="visual" aria-label="Illustrative preview of an automation quality report">
+        <div class="browserbar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><strong>kaelix / run-report.json</strong></div>
+        <div class="terminal"><span class="dim">$</span> kaelix audit exports/orders.csv<br><span class="dim">READ MODE</span>   <span class="success">LOCAL ONLY</span><br><span class="dim">ROWS</span>        12,804<br><span class="dim">CHECKS</span>      schema · nulls · duplicates<br><br><span class="accent">ISSUE / 01</span>  unmatched product_id<br><span class="accent">ISSUE / 02</span>  15 duplicate order rows<br><span class="accent">ISSUE / 03</span>  inconsistent dates<br><br><span class="success">✓</span> tests: passed<br><span class="success">✓</span> source data: not uploaded<br><span class="success">✓</span> next action: ready to review</div>
+        <div class="signal"><span>VERIFIABLE OUTPUT</span><span>Illustrative example, not customer results</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+<div class="strip"><div class="wrap stripgrid">
+  <div class="metric"><strong>15 / 15</strong><span>Data Audit starter tests passing</span></div>
+  <div class="metric"><strong>13 / 13</strong><span>Solana Sentinel product tests passing</span></div>
+  <div class="metric"><strong>Local first</strong><span>No client keys or raw data required in public requests</span></div>
+</div></div>
+<div class="wrap">
+  <section id="services">
+    <div class="topline"><p class="eyebrow">Built for real tasks</p><h2>Pick the problem. Get a working solution.</h2><p class="subtitle">These are indicative starting prices for tightly scoped work. We review feasibility and agree on specifications, deliverables and payment method before accepting any paid project.</p></div>
+    <div class="grid">
+      <article class="card featured">
+        <span class="number">01 · MOST REQUESTED</span>
+        <h3>Python + API automation</h3>
+        <p>Turn repetitive CSV exports, API calls and report-building into a reproducible script or scheduled workflow.</p>
+        <ul class="list"><li>One workflow with clear inputs/outputs</li><li>Error handling + test cases</li><li>Setup instructions and handover</li></ul>
+        <div class="cardfoot"><strong>From €59<small>one scoped workflow</small></strong><a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Request ↗</a></div>
+      </article>
+      <article class="card">
+        <span class="number">02 · DATA ENGINEERING</span>
+        <h3>CSV / JSON rescue</h3>
+        <p>Detect broken rows, missing fields, duplicate records and unexpected schema changes before they hit production.</p>
+        <ul class="list"><li>Data quality and integrity report</li><li>Custom validation rules</li><li>Optional reconciliation and repair plan</li></ul>
+        <div class="cardfoot"><strong>From €39<small>one data audit</small></strong><a href="#demo">Try demo ↗</a></div>
+      </article>
+      <article class="card">
+        <span class="number">03 · CODE QUALITY</span>
+        <h3>Reproducible bug fixes</h3>
+        <p>Get a focused Python or TypeScript defect analyzed, fixed, and backed by a regression test.</p>
+        <ul class="list"><li>Minimum reproducible example</li><li>Patch with explanation</li><li>Validation + rollback notes</li></ul>
+        <div class="cardfoot"><strong>From €49<small>one small fix</small></strong><a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Request ↗</a></div>
+      </article>
+      <article class="card">
+        <span class="number">04 · WEB RELIABILITY</span>
+        <h3>Website QA + monitoring</h3>
+        <p>A small, targeted health-check plan for a site you own or operate — no intrusive probing or unauthorized scanning.</p>
+        <ul class="list"><li>Uptime and response checks</li><li>Basic user-facing error review</li><li>Actionable maintenance report</li></ul>
+        <div class="cardfoot"><strong>From €35<small>one site or endpoint</small></strong><a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Request ↗</a></div>
+      </article>
+      <article class="card">
+        <span class="number">05 · PUBLIC BLOCKCHAIN DATA</span>
+        <h3>Solana Wallet Sentinel</h3>
+        <p>Read-only SOL balance and transaction activity reporting for public wallet addresses. No seed phrase, signing or access to funds.</p>
+        <ul class="list"><li>On-chain public activity only</li><li>JSON reports and optional polling</li><li>Local installation guide</li></ul>
+        <div class="cardfoot"><strong>300 RON<small>custom setup offer</small></strong><a href="index.html">Explore ↗</a></div>
+      </article>
+      <article class="card">
+        <span class="number">06 · AGENT INFRASTRUCTURE</span>
+        <h3>Agent & workflow integration</h3>
+        <p>Connect a defined API or build a local automation prototype with explicit tool permissions, logging and safeguards.</p>
+        <ul class="list"><li>Scope + integration design</li><li>Working prototype where feasible</li><li>Tests and handoff checklist</li></ul>
+        <div class="cardfoot"><strong>From €99<small>quoted after review</small></strong><a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Request ↗</a></div>
+      </article>
+    </div>
+    <p class="detail">Prices are estimates, not automatic offers to contract. Final quote, delivery date, payment route and exclusions require explicit agreement. Security testing only on infrastructure you own or have written authorization to test.</p>
+  </section>
+  <section id="demo">
+    <div class="topline"><p class="eyebrow">Try before you buy</p><h2>Local data audit.<br>No signup. No upload.</h2><p class="subtitle">Paste synthetic CSV or JSON data to test quality checks entirely inside your browser. The input never leaves this page. For a reusable command-line audit, see our open starter script.</p></div>
+    <div class="demo">
+      <div class="demo-intro">
+        <span class="badge">FREE · CLIENT-SIDE ONLY</span>
+        <h3>Catch the silent errors before your report goes out.</h3>
+        <p>Try duplicate detection, empty cells and invalid JSON. This is an educational demonstration; sensitive business data should never be pasted into a public issue.</p>
+        <ul class="demo-points"><li>✓ All checks run in your browser</li><li>✓ No external dependencies or tracking scripts</li><li>✓ Downloadable Python CLI starter</li><li>✓ Custom rules available as a scoped service</li></ul>
+        <p style="margin-top:25px"><a href="https://github.com/MaxGab/kaelix-solana-sentinel/tree/main/examples/kaelix-data-audit">View the tested Python CLI ↗</a></p>
+      </div>
+      <div class="demo-form">
+        <label for="demo-type">Input format</label>
+        <select id="demo-type">
+          <option value="csv">CSV — rows, columns, duplicates</option>
+          <option value="json">JSON — parse and data shape</option>
+        </select>
+        <label for="demo-source">Paste synthetic sample (maximum 50 KB)</label>
+        <textarea id="demo-source" spellcheck="false" aria-describedby="demo-privacy">order_id,email,total
+1001,hello@example.com,29.90
+1002, ,24.00
+1001,hello@example.com,29.90</textarea>
+        <button class="button demobtn" type="button" id="run-demo">Run quality check ↗</button>
+        <div id="demo-output" class="output" data-state="idle" aria-live="polite" role="status">Ready. Choose a format and run the local check.</div>
+        <p id="demo-privacy" class="privacynote">This runs in your browser only. No data is uploaded or stored. Never paste real customer details or credentials.</p>
+      </div>
+    </div>
+  </section>
+  <section id="process">
+    <div class="topline"><p class="eyebrow">Delivery without confusion</p><h2>Three steps to something usable.</h2></div>
+    <div class="steps">
+      <article class="step"><b>STEP / 01</b><h3>Describe a specific problem</h3><p>Send a public, non-sensitive description, synthetic sample and what success looks like.</p></article>
+      <article class="step"><b>STEP / 02</b><h3>Confirm fixed scope</h3><p>We review feasibility, delivery conditions, price and payment method. No charge for the initial request.</p></article>
+      <article class="step"><b>STEP / 03</b><h3>Receive a verifiable result</h3><p>Receive the agreed deliverable with test evidence, instructions and stated limitations.</p></article>
+    </div>
+  </section>
+  <section id="faq">
+    <div class="topline"><p class="eyebrow">Good questions</p><h2>What you should know.</h2></div>
+    <div class="faq">
+      <article><h3>Does your AI work without human oversight?</h3><p>KAELIX helps build and test deliverables. A scoped client commitment and payment require explicit acceptance; quality and security checks are part of delivery.</p></article>
+      <article><h3>Can you fix or access my private repository?</h3><p>Only with authorized access and a written scope. Do not put secrets or confidential data into a public GitHub issue.</p></article>
+      <article><h3>Do I pay to request a quote?</h3><p>No. Requests are free. Prices are starting estimates, not invoices. We agree on payment details before any paid work.</p></article>
+      <article><h3>Where do I send a project?</h3><p>Use the public GitHub request form for high-level, non-sensitive specifications. A confidential channel can be agreed later after initial contact.</p></article>
+    </div>
+  </section>
+</div>
+<div class="callout"><div class="wrap callout-inner">
+  <div><p class="eyebrow">Ready to ship</p><h2>Tell KAELIX what needs fixing.</h2><p>One clear brief. One honest quote. One testable deliverable. No speculative investment products or promised financial returns.</p></div>
+  <a class="button" href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml">Get a quote ↗</a>
+</div></div>
+<div class="wrap"><footer><span>© 2026 KAELIX Studio · Independent experimental engineering services.</span><span><a href="index.html">Solana Sentinel</a> · <a href="https://github.com/MaxGab/kaelix-solana-sentinel">GitHub</a> · <a href="#home">Back to top ↑</a></span></footer></div>
+<script>
+(function () {
+  'use strict';
+  var type = document.getElementById('demo-type');
+  var input = document.getElementById('demo-source');
+  var output = document.getElementById('demo-output');
+  var button = document.getElementById('run-demo');
+  if (!type || !input || !output || !button) return;
+  function parseCsv(text) {
+    var table = [], record = [], field = '', quoted = false;
+    for (var i = 0; i < text.length; i++) {
+      var c = text[i];
+      if (quoted) {
+        if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+        else if (c === '"') quoted = false;
+        else field += c;
+      } else {
+        if (c === '"') {
+          if (field !== '') throw new Error('Unexpected quote at character ' + (i + 1));
+          quoted = true;
+        } else if (c === ',') { record.push(field); field = ''; }
+        else if (c === '\n' || c === '\r') {
+          if (c === '\r' && text[i+1] === '\n') i++;
+          record.push(field); table.push(record); record = []; field = '';
+        } else field += c;
+      }
+    }
+    if (quoted) throw new Error('Unterminated CSV quoted field');
+    if (field !== '' || record.length) { record.push(field); table.push(record); }
+    return table;
+  }
+  function checkCsv(text) {
+    var rows = parseCsv(text);
+    if (!rows.length || !rows[0].length) throw new Error('CSV needs a header row');
+    if (rows.length > 2000) throw new Error('Demo limit: 2,000 CSV rows; use the Python CLI for larger input');
+    var headers = rows[0].map(function (x) { return x.trim(); });
+    if (headers.some(function(x) { return x === ''; })) throw new Error('CSV contains empty header names');
+    var repeats = new Set(), seen = new Set(), empty = 0, malformed = 0, duplicate = 0, trim = 0;
+    headers.forEach(function(x) { if (seen.has(x)) repeats.add(x); seen.add(x); });
+    if (repeats.size) throw new Error('Duplicate CSV headers: ' + Array.from(repeats).join(', '));
+    seen.clear();
+    for (var i = 1; i < rows.length; i++) {
+      var row = rows[i];
+      if (row.length !== headers.length) {malformed++;continue;}
+      var clean = row.map(function(x) {return x.trim();});
+      for (var j = 0; j < row.length; j++) { if (clean[j] === '') empty++; if (row[j] !== clean[j]) trim++; }
+      var signature = JSON.stringify(clean);
+      if (seen.has(signature)) duplicate++;
+      else seen.add(signature);
+    }
+    return [
+      'LOCAL CSV AUDIT · PASS',
+      'Data rows: ' + (rows.length - 1),
+      'Columns: ' + headers.length,
+      'Duplicate rows: ' + duplicate,
+      'Empty cells: ' + empty,
+      'Rows with wrong column count: ' + malformed,
+      'Values with leading/trailing spaces: ' + trim,
+      'Files sent to server: 0'
+    ].join('\n');
+  }
+  function checkJson(text) {
+    var parsed;
+    try { parsed = JSON.parse(text); }
+    catch (err) {throw new Error('Invalid JSON: ' + String(err.message).slice(0, 180));}
+    var kind = Array.isArray(parsed) ? 'array' : (parsed === null ? 'null' : typeof parsed);
+    var keys = parsed && typeof parsed === 'object' ? Object.keys(parsed).length : 0;
+    var entries = Array.isArray(parsed) ? parsed.length : 0;
+    return [
+      'LOCAL JSON AUDIT · PASS',
+      'Syntax: valid JSON',
+      'Root type: ' + kind,
+      'Top-level keys / items: ' + keys,
+      'Array entries: ' + entries,
+      'Bytes uploaded: 0',
+      'Note: schema-level validation requires your agreed data contract.'
+    ].join('\n');
+  }
+  type.addEventListener('change',function () {
+    input.value = type.value === 'json'
+      ? '{"orders":[{"id":1001,"total":29.90},{"id":1002,"total":24.00}],"version":1}'
+      : 'order_id,email,total\n1001,hello@example.com,29.90\n1002, ,24.00\n1001,hello@example.com,29.90';
+    output.textContent = 'Ready to check locally.';
+    output.dataset.state = 'idle';
+  });
+  button.addEventListener('click',function () {
+    var text = input.value.trim();
+    try {
+      if (!text) throw new Error('Paste a CSV or JSON sample first');
+      if (text.length > 50000) throw new Error('Demo size limit: 50 KB; use the CLI for real exports');
+      output.textContent = type.value === 'json' ? checkJson(text) : checkCsv(text);
+      output.dataset.state = 'good';
+    } catch (err) {
+      output.textContent = 'CHECK FAILED\n' + String(err.message).slice(0, 240);
+      output.dataset.state = 'error';
+    }
+  });
+})();
+</script>
+</body>
+</html>

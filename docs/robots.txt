@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maxgab.github.io/kaelix-solana-sentinel/sitemap.xml
