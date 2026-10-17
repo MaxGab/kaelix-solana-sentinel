@@ -237,7 +237,7 @@ footer a:hover{text-decoration:underline}
         <label for="quote-preview">Review and copy your message</label>
         <textarea id="quote-preview" readonly spellcheck="false" aria-live="polite" placeholder="Your request will appear here."></textarea>
         <button type="button" class="button outline demobtn" id="quote-copy">Copy message</button>
-        <a class="button outline demobtn" id="quote-email" href="mailto:contact@kaelix.studio?subject=KAELIX%20Project%20Inquiry">Send prepared quote by email ↗</a>
+        <a class="button outline demobtn" id="quote-email" href="mailto:maxgab62+kaelix@gmail.com?subject=KAELIX%20Project%20Inquiry">Send prepared quote by email ↗</a>
         <a class="button" href="https://ig.me/m/kaelix_hq" target="_blank" rel="noopener noreferrer" id="quote-instagram">Open Instagram DM ↗</a>
         <p class="privacynote" id="quote-status" role="status" aria-live="polite">Create the message, then copy it into your DM. Never include passwords, API keys, seed phrases or confidential customer records.</p>
         <p class="privacynote">Prefer GitHub? <a href="https://github.com/MaxGab/kaelix-solana-sentinel/issues/new?template=service-request.yml" target="_blank" rel="noopener noreferrer">Use the public technical request form ↗</a></p>
@@ -385,7 +385,7 @@ footer a:hover{text-decoration:underline}
       qPreview.value = 'Hello KAELIX Studio! I would like a free project quote.\\nService: ' +
         service + '\\nBudget: ' + budget + '\\nDesired outcome: ' + description +
         '\\nPlease confirm scope, tests, delivery window and pricing before any work begins.';
-      if (qEmail) qEmail.href = 'mailto:contact@kaelix.studio?subject=' + encodeURIComponent('KAELIX Project Inquiry') + '&body=' + encodeURIComponent(qPreview.value);
+      if (qEmail) qEmail.href = 'mailto:maxgab62+kaelix@gmail.com?subject=' + encodeURIComponent('KAELIX Project Inquiry') + '&body=' + encodeURIComponent(qPreview.value);
       qStatus.textContent = 'Brief prepared. Click Send by email, or copy it to Instagram DM.';
     });
     qCopy.addEventListener('click', function () {
